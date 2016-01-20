@@ -25,13 +25,13 @@ module.exports = {
       {
         test: /\.jsx$/,
         exclude: /(node_modules)/,
-        loaders: ['react-hot','babel']
+        loaders: ['babel']
       },
       //JS
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
-        loaders: ['react-hot','babel']
+        loaders: ['babel']
       },
       //SCSS
       {
