@@ -1,2 +1,2 @@
-# ReactStarter
-A template for my new React projects, early work in progres . . . 
+# freeCodeCamp markdown viewer
+A very basic markdown viewer created using React, with webpack, babel e.t.c
