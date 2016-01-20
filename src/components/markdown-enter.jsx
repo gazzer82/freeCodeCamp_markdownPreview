@@ -14,9 +14,10 @@ export default class MarkdownEnter extends Component {
   render(){
     return (
         <div className="row">
-          <div className="large-12 columns">
+          <div className="large-12 columns markdown-col z-depth-1">
             <label>
-              <textarea rows='20' value={this.props.markDown} onChange={this.onChangeHandler} placeholder="enter markdown to preview init"></textarea>
+              <textarea id='markdown' className='materialize-textarea markdown-enter' value={this.props.markDown} onChange={this.onChangeHandler} placeholder="enter markdown to preview"></textarea>
+              <label for="markdown">Markdown</label>
             </label>
           </div>
         </div>

@@ -3,7 +3,7 @@
 #### A very basic markdown viewer created using:
 
 * React
-* Foundation
+* Materlialize
 * Webpack
 * babel
 * SASS

@@ -1,0 +1,30 @@
+$background-color: teal;
+$text-color: black;
+$highlight: rgb(158, 158, 158);
+
+body{
+  background-color: $background-color;
+}
+
+.page-data{
+  margin-top: 2em;
+}
+
+.preview-bottom{
+  background-color: $highlight;
+}
+
+.divider-label{
+  position: relative;
+  top: 2em;
+  padding-bottom: 2em;
+}
+
+.preview-col, .markdown-col{
+  margin: 0 1em 0 1em;
+  padding: 1em;
+}
+
+.preview-col{
+  padding-bottom: 2em;
+}

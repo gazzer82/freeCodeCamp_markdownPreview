@@ -11,9 +11,11 @@ export default class MarkDownDisplay extends Component {
     return (
     <div>
       <div className="row">
-        <div className="large-12 columns">
+        <div className="large-12 columns preview-col z-depth-1">
           {/*Render as HTML not as a string*/}
           <div dangerouslySetInnerHTML={this.renderMarkDown()} />
+          <div id='divider' className="divider preview-bottom"></div>
+          <label className='divider-label' for='divider'>Preview</label>
         </div>
       </div>
     </div>

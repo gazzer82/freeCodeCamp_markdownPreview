@@ -11,13 +11,27 @@ module.exports = {
     publicPath: '/js',
     filename: "app.js"
   },
+  resolve: {
+        extensions: [
+            '', '.js', '.jsx',
+            '.css', '.styl', '.scss', '.less', '.sass'
+          ],
+          alias: {
+          }
+  },
   module: {
     loaders:[
       //JSX
       {
         test: /\.jsx$/,
         exclude: /(node_modules)/,
-        loaders: ['babel']
+        loaders: ['react-hot','babel']
+      },
+      //JS
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        loaders: ['react-hot','babel']
       },
       //SCSS
       {
@@ -29,6 +43,24 @@ module.exports = {
       { test: /\.css$/,
         exclude: /(node_modules)/,
         loader: "style-loader!css-loader"
+      },
+      //Fonts
+      {
+        test: /\.(woff|woff2)$/,
+        loader: "url?limit=10000&mimetype=application/font-woff"
+      },
+      {
+        test: /\.ttf$/,
+        loader: "url?limit=10000&mimetype=application/octet-stream"
+      },
+      {
+        test: /\.eot$/,
+        loader: "file"
+      },
+      //Images
+      {
+        test: /\.svg$/,
+        loader: "url?limit=10000&mimetype=image/svg+xml"
       }
     ]
   },
@@ -39,11 +71,5 @@ module.exports = {
       inject: 'body',
       filename: '../index.html'
     })
-  ],
-  resolve: {
-        extensions: [
-            '', '.js', '.jsx',
-            '.css', '.styl', '.scss', '.less', '.sass'
-          ]
-  }
+  ]
 }
