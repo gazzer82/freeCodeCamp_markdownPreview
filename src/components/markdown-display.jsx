@@ -12,7 +12,7 @@ export default class MarkDownDisplay extends Component {
     <div>
       <div className="row">
         <div className="large-12 columns">
-          //Render as HTML not as a string
+          {/*Render as HTML not as a string*/}
           <div dangerouslySetInnerHTML={this.renderMarkDown()} />
         </div>
       </div>

@@ -16,7 +16,7 @@ export default class MarkdownEnter extends Component {
         <div className="row">
           <div className="large-12 columns">
             <label>
-              <textarea rows='20' value={this.props.markDown} onChange={this.onChangeHandler} placeholder="enter markdown to preview"></textarea>
+              <textarea rows='20' value={this.props.markDown} onChange={this.onChangeHandler} placeholder="enter markdown to preview init"></textarea>
             </label>
           </div>
         </div>

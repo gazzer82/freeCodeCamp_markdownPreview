@@ -3,16 +3,13 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 console.log(__dirname);
 module.exports = {
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
-    'webpack/hot/only-dev-server', // "only" prevents reload on syntax errors
     './src/app'
   ],
-  devtool: 'eval',
+  devtool: 'source-map',
   output:{
     path: __dirname + '/dist/js',
     publicPath: '/js',
-    filename: "app.js",
-    pathinfo: true
+    filename: "app.js"
   },
   module: {
     loaders:[
@@ -20,7 +17,7 @@ module.exports = {
       {
         test: /\.jsx$/,
         exclude: /(node_modules)/,
-        loaders: ['react-hot','babel']
+        loaders: ['babel']
       },
       //SCSS
       {
@@ -36,18 +33,12 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
       title: 'ReactStarter',
       template: './src/html/index_template.html',
       inject: 'body',
       filename: '../index.html'
-    })/*,
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery"
-    })*/
+    })
   ],
   resolve: {
         extensions: [
