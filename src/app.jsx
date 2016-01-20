@@ -1,9 +1,11 @@
-import {Component, PropTypes} from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/app'
 
-require("./css/main.scss");
+require("./css/main");
 
 // Ask react to render the class
 //var element = React.createElement(Dropdown,options);
 
 // Tell it where to place rendered element in the DOM
-//ReactDOM.render(element, document.querySelector('.target'));
+ReactDOM.render(<App />, document.querySelector('.container'));

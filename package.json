@@ -4,14 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && node server.js",
+    "postinstall": "webpack --config ./webpack-production.config --progress --colors",
+    "start": "node server.js",
+    "debug": "webpack && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "marked": "^0.3.5",
     "react": "^0.14.5",
-    "react-dom": "^0.14.5"
+    "react-dom": "^0.14.5",
+    "remarkable": "^1.6.1"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",

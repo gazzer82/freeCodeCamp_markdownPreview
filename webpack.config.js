@@ -43,7 +43,11 @@ module.exports = {
       template: './src/html/index_template.html',
       inject: 'body',
       filename: '../index.html'
-    })
+    })/*,
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    })*/
   ],
   resolve: {
         extensions: [
