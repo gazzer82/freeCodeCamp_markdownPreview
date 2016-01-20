@@ -15,7 +15,7 @@ export default class MarkDownDisplay extends Component {
           {/*Render as HTML not as a string*/}
           <div dangerouslySetInnerHTML={this.renderMarkDown()} />
           <div id='divider' className="divider preview-bottom"></div>
-          <label className='divider-label' for='divider'>Preview</label>
+          <label className='divider-label' htmlFor='divider'>Preview</label>
         </div>
       </div>
     </div>
