@@ -19,17 +19,24 @@ export default class App extends Component {
   }
   render(){
     return (
-      <div className='row'>
-        <div className='small-6 columns'>
-          {/*Enter markdown*/}
-          <MarkdownEnter
-            markDown={this.state.markDown}
-            processmarkDown={this.processmarkDown}
-            />
+      <div>
+        <div className='row'>
+          <div className='small-12 medium-6 columns'>
+            {/*Enter markdown*/}
+            <MarkdownEnter
+              markDown={this.state.markDown}
+              processmarkDown={this.processmarkDown}
+              />
+          </div>
+          <div className='small-12 medium-6 columns'>
+            {/*Display markdown*/}
+            <MarkdownDisplay markDown={this.state.markDown}/>
+          </div>
         </div>
-        <div className='small-6 columns'>
-          {/*Display markdown*/}
-          <MarkdownDisplay markDown={this.state.markDown}/>
+        <div className='row'>
+          <div className='small-12 columns'>
+            <p className='text-center'>View this pages source code on <a href='http://https://github.com/gazzer82/freeCodeCamp_markdownPreview'>Github</a></p>
+          </div>
         </div>
       </div>
     );
